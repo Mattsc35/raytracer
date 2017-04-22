@@ -1,9 +1,8 @@
-CC = c++
-LIBS = -O3 -Wall
-all : raytracer
+CC = gcc
+LIBS = -lm
 
-raytracer : raytracer.cpp
-	$(CC) -o raytracer $(LIBS) raytracer.cpp
-
+ex: ex.c ex.h
+	$(CC) ex.c ex.h $(LIBS) -o ex.out
 clean:
-	rm -rf *~ *.ppm raytracer
+	rm -rf *.out *~ *.gch
+
